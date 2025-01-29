@@ -34,6 +34,11 @@ The regression model is trained to predict the **Daily Energy Usage** of devices
 
 The model's predictions are visualized on an interactive chart using **Plotly.js**, comparing actual and predicted values.
 
+**Screenshot:**
+![1](/Project/screenshot/Regression_Model/1.JPG)
+![2](/Project/screenshot/Regression_Model/2.JPG)
+![3](/Project/screenshot/Regression_Model/3.JPG)
+
 **Sample Plot:**  
 Each point represents a device with its predicted and actual energy consumption.
 
@@ -50,3 +55,5 @@ Each point represents a device with its predicted and actual energy consumption.
   type: "bar",
   name: "Actual Usage"
 }
+
+
