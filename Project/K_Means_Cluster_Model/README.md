@@ -44,6 +44,9 @@ The clusters are plotted using Plotly.js with color-coded markers:
 - **Blue:** Idle-efficient devices.
 - **Green:** Constantly running devices.
 
+**Screenshot:**
+![1](/Project/screenshot/K_Means.JPG))
+
 **Sample Plot:**  
 Each point in the plot represents a device, and hovering over it displays the device name, daily usage, and idle time.
 
