@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devices per Household Size</title>
+  <link rel="stylesheet" href="Visualization.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Average Number of Devices per Household Size</h1>
+  
+  <!-- Canvas for displaying the chart (original bar chart) -->
+  <canvas id="devicesChart" width="800" height="400"></canvas>
+
+  <h2>Predictions</h2>
+  <!-- Container for displaying predictions -->
+  <div id="predictions-container"></div>
+
+  <!-- Prediction chart -->
+  <canvas id="predictionChart" width="800" height="400"></canvas>
+
+  <!-- Add the link to the separate Prediction.js script here -->
+  <script src="Prediction.js"></script>
+  <!-- Add an "Evaluate" button -->
+  <button id="evaluateButton">Evaluate Model</button>
+
+  <!-- Display Evaluation Metrics -->
+  <div id="evaluationMetrics" style="display: none;">
+    <h3>Model Evaluation</h3>
+    <p id="r2"></p>
+    <p id="mae"></p>
+    <p id="mse"></p>
+  </div>
+
+  <h2>Device Distribution by Household Size</h2>
+  <!-- Canvas for the new distribution chart -->
+  <canvas id="deviceDistributionChart" width="800" height="400"></canvas>
+
+  <!-- JavaScript -->
+  <script src="Visualization.js"></script>
+  
+  <script src="DeviceDistribution.js"></script>
+  
+  
+
+  <!-- External JavaScript (Keep this intact) -->
+  <script src="Visualization.js"></script>
+
+  <!-- Link to the new evaluateMetrics.js script -->
+  <script src="evaluateMetrics.js"></script>
+  
+</body>
+</html>

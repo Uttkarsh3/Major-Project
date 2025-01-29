@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Section */
+header {
+  background-color: #0044cc;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  height: 40vh;
+  background: url('background.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.cta-buttons .btn {
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  margin: 0.5em;
+}
+
+.cta-buttons .btn-secondary {
+  background: #6c757d;
+}
+
+.cta-buttons .btn:hover {
+  opacity: 0.8;
+}
+
+/* Features Section */
+.features {
+  padding: 30px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.features h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-item {
+  max-width: 300px;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Monitoring Section */
+.monitoring {
+  padding: 30px 20px;
+  background-color: #eaf2ff;
+  text-align: center;
+}
+
+.monitoring-dashboard {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.monitoring-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Footer Section */
+footer {
+  background-color: #0044cc;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

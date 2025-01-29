@@ -1,0 +1,26 @@
+{
+    "Low": {
+        "AC": 1,
+        "TV": 1,
+        "LightBulb": 6,
+        "Fan": 3,
+        "Refrigerator": 1,
+        "WashingMachine": 1
+    },
+    "Medium": {
+        "AC": 2,
+        "TV": 2,
+        "LightBulb": 10,
+        "Fan": 5,
+        "Refrigerator": 2,
+        "WashingMachine": 2
+    },
+    "High": {
+        "AC": 3,
+        "TV": 3,
+        "LightBulb": 13,
+        "Fan": 6,
+        "Refrigerator": 3,
+        "WashingMachine": 3
+    }
+}

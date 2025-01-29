@@ -1,0 +1,107 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Container for the entire content */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Styling for the chart container */
+#devicesChart,
+#predictionChart,
+#deviceDistributionChart {
+    width: 60% !important; /* Makes the chart width smaller */
+    height: 370px !important; /* Makes the chart height smaller */
+    margin: 20px auto; /* Centers the chart on the page */
+    display: block;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Set the size for both the original and prediction charts */
+canvas {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  /* Optional: Style the prediction section to match the existing layout */
+  #predictions-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+
+/* Container for additional content, such as descriptions or other visualizations */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add space between different sections on the page */
+.section {
+    margin-top: 30px;
+}
+
+/* Responsive design: Adjust chart size on small screens */
+@media screen and (max-width: 768px) {
+    #devicesChart,
+    #predictionChart,
+    #deviceDistributionChart {
+        width: 95% !important;
+        height: 400px !important;
+    }
+}
+
+/* Button Styling */
+#evaluateButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #evaluateButton:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling for the evaluation metrics */
+  #evaluationMetrics {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  #evaluationMetrics h3 {
+    margin-top: 0;
+  }
+  
+  #evaluationMetrics p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+  }
+  
