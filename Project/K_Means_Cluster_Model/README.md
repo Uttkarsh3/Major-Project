@@ -1,33 +1,60 @@
-What K-Means Does:
-Input Data:
+# Device Clustering using K-Means
 
-Each device has two attributes:
-Daily Usage (Normalized): Represents how much energy the device uses daily.
-Idle Time (Normalized): Represents how long the device remains idle.
-Clustering:
+This project uses the **K-Means clustering algorithm** to group devices based on their energy usage patterns. The clusters are visualized using **Plotly.js**, providing a clear understanding of the device categories.
 
-The K-Means algorithm groups devices into k clusters based on these two attributes.
-The clustering is done by minimizing the distance between data points (devices) and the centroids (mean points) of each cluster.
-Iterative Process:
+---
 
-Step 1: Randomly initialize k centroids (in your project, k = 3).
-Step 2: Assign each device to the nearest centroid (cluster).
-Step 3: Update the centroids based on the mean position of all points in the cluster.
-Step 4: Repeat until the centroids stabilize (convergence).
-What Clusters Mean in the Project:
-Cluster 1 (High Energy Usage Devices):
+## 🔧 **How It Works**
 
-Devices that consume a lot of electricity daily.
-Cluster 2 (Energy-Efficient Idle Devices):
+The K-Means algorithm is applied to cluster devices using the following parameters:
+- **Daily Usage (Normalized)**: How much energy a device uses daily.
+- **Idle Time (Normalized)**: How long the device remains idle.
 
-Devices that are idle most of the time and consume minimal energy.
-Cluster 3 (Constantly Running Devices):
+The devices are grouped into **3 clusters**:
+1. **Cluster 1 - High Energy Usage Devices:**  
+   Devices that consume a lot of electricity daily.
+   
+2. **Cluster 2 - Energy-Efficient Idle Devices:**  
+   Devices that are idle most of the time and consume minimal energy.
 
-Devices that remain operational continuously with moderate energy usage.
-Why K-Means is Useful Here:
-Insightful Grouping: Helps you identify energy consumption patterns in devices.
-Data Analysis: Makes it easier to optimize power usage by targeting specific clusters.
-Visualization: The plot shows distinct clusters so users can visually understand how devices behave.
-Visualization Enhancement:
-The updated chart provides meaningful labels and descriptions for the clusters, making it easier to interpret.
-Devices plotted in "Cluster 1" are flagged as heavy users, while those in "Cluster 2" might be idle-efficient ones.
+3. **Cluster 3 - Constantly Running Devices:**  
+   Devices that remain operational continuously with moderate energy usage.
+
+---
+
+## 🧮 **Key Steps in K-Means Clustering**
+
+1. **Initialize Centroids:**  
+   Randomly select `k` data points (centroids) from the dataset.
+
+2. **Assign Clusters:**  
+   Assign each device to the nearest centroid based on its Daily Usage and Idle Time.
+
+3. **Update Centroids:**  
+   Calculate new centroids as the mean of all devices in each cluster.
+
+4. **Convergence:**  
+   Repeat until centroids stabilize or a maximum number of iterations is reached.
+
+---
+
+## 📊 **Visualization**
+The clusters are plotted using Plotly.js with color-coded markers:
+- **Red:** High energy usage devices.
+- **Blue:** Idle-efficient devices.
+- **Green:** Constantly running devices.
+
+**Sample Plot:**  
+Each point in the plot represents a device, and hovering over it displays the device name, daily usage, and idle time.
+
+```javascript
+{
+  x: clusterPoints.map(item => item.dailyUsage),
+  y: clusterPoints.map(item => item.idleTime),
+  mode: "markers",
+  type: "scatter",
+  name: "Cluster 1 (High Energy Usage)",
+  marker: { size: 12, color: "red" },
+  text: clusterPoints.map(item => 
+      `Device: ${item.deviceName}<br>Daily Usage: ${item.dailyUsage.toFixed(2)}<br>Idle Time: ${item.idleTime.toFixed(2)}`)
+}
